@@ -67,6 +67,11 @@ public class SchedulingController {
 			}
 	    	return responseEntity;
 	    }
+	/**
+	 * 	
+	 * @param schedulingId
+	 * @return
+	 */
     //Get Scheduling By Scheduling ID
 	@GetMapping("/byId")
 	 public ResponseEntity<?> getShedulingById(@PathVariable String schedulingId ){
@@ -81,7 +86,12 @@ public class SchedulingController {
 			}
 	    	return responseEntity;
 	    } 
-	
+	/**
+	 * 
+	 * @param pageable
+	 * @param clinicId
+	 * @return
+	 */
 		//Get Paging Scheduling 
 		@GetMapping("/page")
 		 public ResponseEntity<?> getPagigantionShedulingByClinicId(@PageableDefault(page=0,size=10)Pageable pageable,@PathVariable String clinicId ){
@@ -98,6 +108,11 @@ public class SchedulingController {
 		    	return responseEntity;
 		    } 
 		
+		/**
+		 * 
+		 * @param clinicId
+		 * @return
+		 */
 				//Get All Scheduling By ClinicId
 				@GetMapping("/all")
 				 public ResponseEntity<?> getSchuingByClinicId(@PathVariable String clinicId ){
@@ -113,7 +128,11 @@ public class SchedulingController {
 						}
 				    	return responseEntity;
 				    } 
-				
+			/**
+			 * 	
+			 * @param schedulingId
+			 * @return
+			 */
 				
 				//Get All Scheduling By ClinicId
 				@GetMapping("/remove")
