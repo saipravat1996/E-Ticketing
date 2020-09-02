@@ -6,7 +6,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 import com.hexaphor.model.Scheduling;
-import com.hexaphor.model.Slot;
 
 public interface ISchedulingService {
 
