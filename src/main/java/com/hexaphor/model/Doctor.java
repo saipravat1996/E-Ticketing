@@ -1,12 +1,16 @@
 package com.hexaphor.model;
 
-import java.sql.Date;
+
+import java.util.Date;
+import java.util.List;
 
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 
 import lombok.AllArgsConstructor;
@@ -39,10 +43,12 @@ public class Doctor {
 	private String emailId;
 	private String degree;
 	@ElementCollection(fetch = FetchType.EAGER)
-	private String[] specialization;
+	private List<String> specialization;
 	private Integer status;
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date createdOn;
 	private String createdBy;
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date updatedOn;
 	private String updatedBy;
 	private String uiStatus;

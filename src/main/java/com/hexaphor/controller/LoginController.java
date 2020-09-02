@@ -17,7 +17,7 @@ import com.hexaphor.service.IPatientService;
 
 @RestController
 @RequestMapping("/rest/login")
-public class Login_Controller {
+public class LoginController {
 	
 	@Autowired
 	private ILoginService login_Service;

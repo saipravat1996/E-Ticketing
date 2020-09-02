@@ -12,8 +12,8 @@ import com.hexaphor.common.Command;
 import com.hexaphor.model.LoginUser;
 import com.hexaphor.model.Patient;
 import com.hexaphor.model.Status;
-import com.hexaphor.repository.LoginUserRepository;
-import com.hexaphor.repository.PatientRepository;
+import com.hexaphor.repo.LoginUserRepository;
+import com.hexaphor.repo.PatientRepository;
 import com.hexaphor.service.IPatientService;
 
 @Service

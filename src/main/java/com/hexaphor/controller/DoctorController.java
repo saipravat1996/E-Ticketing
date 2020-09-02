@@ -18,7 +18,7 @@ import com.hexaphor.service.IDoctorService;
 
 @RestController
 @RequestMapping("/rest/doctor")
-public class Doctor_Controller {
+public class DoctorController {
 
 	//Logger logger = (Logger) LoggerFactory.getLogger(Doctor_Controller.class);
 	

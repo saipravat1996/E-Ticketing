@@ -8,8 +8,8 @@ import org.springframework.stereotype.Component;
 import com.hexaphor.Global.StaticData;
 import com.hexaphor.model.Status;
 import com.hexaphor.model.TrackerId;
-import com.hexaphor.repository.StatusRepository;
-import com.hexaphor.repository.TrackerIdRepository;
+import com.hexaphor.repo.StatusRepository;
+import com.hexaphor.repo.TrackerIdRepository;
 
 @Component
 public class Command {
@@ -25,21 +25,30 @@ public class Command {
 		String prifix=null;
 		String[] filesize=null;
 		String newID=null;
-		//get TrackerId Table Data
+		
 		try {
+		//get TrackerId Table Data
 		tracker_Id=tracker_Id_Repository.findById(trackid).get();
 		
+		//get PrefixID
 		prifix=tracker_Id.getPrefix();
 		
+		//Split insertID using prefix value 
 		filesize=tracker_Id.getLastIdInsert().split(prifix);
 		
+		//Get digit value
 		String st=filesize[1];
+		
+		//Increase One value 
 		Long filesizes=Long.parseLong(st)+1;
 		
+		//Differentiate the length
 		int diff=st.length()-filesizes.toString().length();
 		
+		//add the last digit value 
 		String s=st.substring(0, diff)+filesizes.toString();
 		
+		//concatited the string  
 		newID=prifix+s;
 		
 		}

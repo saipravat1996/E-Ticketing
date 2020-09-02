@@ -1,4 +1,4 @@
-package com.hexaphor.repository;
+package com.hexaphor.repo;
 
 import javax.transaction.Transactional;
 

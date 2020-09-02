@@ -13,9 +13,11 @@ import com.hexaphor.service.IPatientService;
 
 @RestController
 @RequestMapping("/rest/Patient")
-public class Patient_Controller {
+public class PatientController {
+	
 	@Autowired
 	private IPatientService Patient_Service;
+	
 	//Logger logger = (Logger) LoggerFactory.getLogger(Patient_Controller.class);
 	@PostMapping("/patientSave")
 public ResponseEntity<String>  patient_registration(@RequestBody Patient patient){

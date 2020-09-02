@@ -1,4 +1,4 @@
-package com.hexaphor.repository;
+package com.hexaphor.repo;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

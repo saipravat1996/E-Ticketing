@@ -13,7 +13,7 @@ import com.hexaphor.common.Command;
 import com.hexaphor.model.Clinic;
 import com.hexaphor.model.Doctor;
 import com.hexaphor.model.Status;
-import com.hexaphor.repository.DoctorRepository;
+import com.hexaphor.repo.DoctorRepository;
 import com.hexaphor.service.IDoctorService;
 
 @Service

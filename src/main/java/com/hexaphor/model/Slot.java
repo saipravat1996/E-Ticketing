@@ -1,28 +1,36 @@
 package com.hexaphor.model;
 
 import java.sql.Timestamp;
+import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="Slot")
+@Entity
 public class Slot {
 	
-	@Id
-	private String slotId;
+	
+	  @Id 
+	  @GeneratedValue
+	private Integer slotId;
+	 
 	private String slotName;
-	private Timestamp StartDate; 
-	private String stratTime;
-	private String endTime;
+	private Timestamp StartDate;
+	@Temporal(TemporalType.TIME)
+	private Date stratTime;
+	@Temporal(TemporalType.TIME)
+	private Date endTime;
 	
 
 }

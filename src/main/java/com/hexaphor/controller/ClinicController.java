@@ -20,9 +20,9 @@ import com.hexaphor.service.IClinicService;
 
 @RestController
 @RequestMapping("/rest/clinic")
-public class Clinic_Controller {
+public class ClinicController {
 	
-	private static Logger logger=Logger.getLogger(Clinic_Controller.class);
+	private static Logger logger=Logger.getLogger(ClinicController.class);
 	@Autowired
 	private IClinicService clinic_Service;
 	

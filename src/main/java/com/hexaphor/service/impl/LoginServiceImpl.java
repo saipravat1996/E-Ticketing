@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.hexaphor.model.LoginUser;
-import com.hexaphor.repository.LoginUserRepository;
+import com.hexaphor.repo.LoginUserRepository;
 import com.hexaphor.service.ILoginService;
 
 @Service

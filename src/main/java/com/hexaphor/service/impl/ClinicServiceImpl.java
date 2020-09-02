@@ -15,8 +15,8 @@ import com.hexaphor.common.Command;
 import com.hexaphor.model.Clinic;
 import com.hexaphor.model.LoginUser;
 import com.hexaphor.model.Status;
-import com.hexaphor.repository.ClinicRepository;
-import com.hexaphor.repository.LoginUserRepository;
+import com.hexaphor.repo.ClinicRepository;
+import com.hexaphor.repo.LoginUserRepository;
 import com.hexaphor.service.IClinicService;
 
 @Service
@@ -52,7 +52,7 @@ public class ClinicServiceImpl implements IClinicService {
 	    	//Get TrackerID for Login Table 
 	    	Tracking_ID=code.createNewTrackerId(6);
 	    	
-	    	login_User.setRole("RL3");
+	    	login_User.setRole("RL1");
 	    	login_User.setLoginID(Tracking_ID);
 	    	
 			login_User=login_User_Repository.save(login_User);
@@ -64,7 +64,7 @@ public class ClinicServiceImpl implements IClinicService {
 			
 			//Create new Clinic TrackerID
 			Tracking_ID=code.createNewTrackerId(1);
-			clinic.setRole("RL3");
+			clinic.setRole("RL1");
 			clinic.setClinicID(Tracking_ID);
 			clinic.setLoginID(login_User.getLoginID());
 			

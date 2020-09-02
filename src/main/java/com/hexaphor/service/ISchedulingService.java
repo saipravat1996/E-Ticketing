@@ -1,21 +1,26 @@
 package com.hexaphor.service;
 
+import java.util.List;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-import com.hexaphor.model.Scheduing;
+import com.hexaphor.model.Scheduling;
+import com.hexaphor.model.Slot;
 
 public interface ISchedulingService {
 
 	
-	public Scheduing saveScheduling(Scheduing scheduing)throws Exception;
+	public Scheduling saveScheduling(Scheduling scheduing)throws Exception;
 	
-	public Page<Scheduing>  getAllSchedulingByClinicId(Pageable pageable,String clinicId)throws Exception;
+	public Page<Scheduling>  getPagingSchedulingByClinicId(Pageable pageable,String clinicId)throws Exception;
 	
-	public Scheduing updateScheling(Scheduing scheduing) throws Exception;
+	public Scheduling updateScheling(Scheduling scheduing) throws Exception;
 	
-	public Scheduing getSchedulingBySchedulingId(String schdulingId)throws Exception;
+	public Scheduling getSchedulingBySchedulingId(String schdulingId)throws Exception;
 	
+	public List<Scheduling>  getAllSchedulingByClinicId(String clinicId)throws Exception;
 	
+	public String  removeSchedulingById(String schdulingId)throws Exception;
 	
 }

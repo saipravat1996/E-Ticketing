@@ -20,6 +20,7 @@ public class Disease {
 	@Id
 	private String diseaseId;
 	private String diseaseName;
+	private String clinicId;
 	private Date updatedBy;
 	private Date createdBy;
 	private Integer status;
